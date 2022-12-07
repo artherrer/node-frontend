@@ -10,7 +10,10 @@
             <tr>
               <th scope="col">#</th>
               <th scope="col">Nombre</th>
+              <th scope="col">Apellido</th>
               <th scope="col">Email</th>
+              <th scope="col">Dirección</th>
+              <th scope="col">Teléfono</th>
               <th scope="col">Acciones</th>
             </tr>
           </thead>
@@ -18,7 +21,10 @@
             <tr v-for="(employee, index) in employees" :key="index">
               <th scope="row">{{ index + 1 }}</th>
               <td>{{ employee.name }}</td>
+              <td>{{ employee.last_name }}</td>
               <td>{{ employee.email }}</td>
+              <td>{{ employee.address }}</td>
+              <td>{{ employee.phone_number }}</td>
               <td>
                 <router-link class="btn btn-secondary btn-sm" :to="{ name: 'EmployeesEdit', params: { id: employee.id } }"
                   >Editar empleado</router-link
